@@ -9,25 +9,10 @@
 // With arrow functions, `this` is bound to the context in which the function is originally created.
 
 
-// function debounce (callback, wait) {
-//   let timeoutID = null;
-  
-//   return function (...args) {
-//     const context = this;
-//     clearTimeout(timeoutID)
-//     timeoutID = setTimeout(function () {
-//       timeoutID = null;
-
-//       callback.apply(context, args)
-//     }, wait)
-//   }
-// }
-
-
 function debounce (func, wait) {
   let timeoutID = null;
 
-  return (...args) {
+  return function (...args) {
     const context = this;
     clearTimeout(timeoutID);
 
@@ -44,10 +29,10 @@ function SayHello () {
   console.log("My name is", this.name)
 }
 
-const amy = {
+const Person = {
   name: "Amy",
   introduction: debounce(SayHello)
 }
 
-amy.introduction() // My name is Amy
+Person.introduction() // My name is Amy
 
