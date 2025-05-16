@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import NewApp from './GFE75/debounce/NewApp';
-import Todo from './HTML-DOM-manipulations/Todo';
+import Todo from './HTML-CSS-JS-REACT/TodoApp/Todo';
 
 function App() {
   return (
