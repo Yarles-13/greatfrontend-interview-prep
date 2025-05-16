@@ -17,9 +17,8 @@ function debounce (func, wait) {
     clearTimeout(timeoutID);
 
     timeoutID = setTimeout(function () {
-      timeoutID = null
-
-      func.apply(context, args)
+    timeoutID = null
+    func.apply(context, args)
     }, wait)
   }
 }
@@ -31,7 +30,7 @@ function SayHello () {
 
 const Person = {
   name: "Amy",
-  introduction: debounce(SayHello)
+  introduction: debounce(SayHello, 1000)
 }
 
 Person.introduction() // My name is Amy
