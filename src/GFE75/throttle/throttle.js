@@ -26,6 +26,8 @@ function throttle (func, delay) {
 
 
 
+
+
 window.addEventListener("scroll", throttle(() => {
   console.log("scroll event triggered")
 }, 3000))
