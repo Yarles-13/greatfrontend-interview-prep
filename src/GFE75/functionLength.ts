@@ -1,4 +1,4 @@
-export default function FunctionLength (fn: any): number {
+export default function FunctionLength (fn: Function): number {
   return fn.length; 
 }
 
