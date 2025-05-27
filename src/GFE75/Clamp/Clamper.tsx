@@ -6,6 +6,14 @@
 
 // with Math Min 
 
-function clamp (number , max, min ) {
-  return Math.min(Math.max(number, min), max)
+export default function Clamper (target:number, lower:number, upper:number ):number {
+  if (target < lower) {
+    return lower
+  }
+
+  if (target > upper) {
+    return upper
+  }
+
+  return target;
 }
