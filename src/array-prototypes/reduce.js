@@ -1,6 +1,5 @@
 Array.prototype.reduce = function (callback, initialValue) {
-  // inisitalize acc 
-  // inistlize 
+  
   let accumulator = initialValue === undefined ? undefined : initialValue;
   let start = initialValue === undefined ? 1 : 0;
 
